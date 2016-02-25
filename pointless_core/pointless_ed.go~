@@ -1,0 +1,13 @@
+package pointless_core;
+
+import (
+       "strings"
+       "github.com/draxil/node_template"
+       "log"
+)      
+
+func ed_meat_el( current string ) ( *node_template.NodeTemplate ){
+    meat_el, _ := node_template.Parse(strings.NewReader("<form method='POST'><input name=password type=password><br><textarea rows=20 cols=30 name='page_data'>" + current + "</textarea><button>Save</button></form>"))
+    log.Println( "Edit: " + current )
+    return meat_el
+}

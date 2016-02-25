@@ -1,0 +1,9 @@
+package pointless_core;
+
+import( "http"
+	"github.com/draxil/node_template"
+	 "strings" );
+
+func first_run( w http.ResponseWriter, r * http.Request, state * phe_state ){
+     meat_el := 
+}

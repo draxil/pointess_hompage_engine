@@ -1,0 +1,12 @@
+package pointless_core;
+
+import ( "crypto/sha1"
+       	 "fmt"
+	 "io")
+
+func crypt_site_password( pwd string ) ( string ){
+        h := sha1.New()                                                  
+        io.WriteString(h, pwd)                                              
+        io.WriteString(h, "sp1ce")
+        return fmt.Sprintf("%x", h.Sum(nil) )
+}
